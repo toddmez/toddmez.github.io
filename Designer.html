@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todd Mesewicz's Portfolio</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto:700|Roboto+Slab|Open+Sans:300" rel="stylesheet">
+	<link rel="stylesheet" href="js/aos-master/dist/aos.css">
+	<script src="js/aos-master/dist/aos.js"></script>
+	<script src="js/xeogl-master/build/xeogl.js"></script>
+	 <script src="js/xeogl-master/examples/js/models/glTFModel.js"></script>
+	
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img src="media/navigation/head3.png" alt="robot man"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Welcome <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Instructor.html">The Instructor</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="Designer.html">The Designer</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<section>
+
+
+<div class="container fadebox mt-3 mb-3">
+<div class="row">
+<div class="px-2 py-2 mt-3">
+		<h1>Teaching Examples</h1>
+		<p class="white">Here are some examples of assignments I would give during a course. These tutorials would be generated and improved over time. Depending on the feedback that I would receive from students I would either add or modify the instructions. </p>
+		<p class="white">After a few courses the assignments became the basis for teaching specific skills to the students that would need in order to complete a final project. At Purdue and Ivy Tech it was a project of their choice. A 3D Charcter Model, 3D Architectural Visualization or an Animated Mechanical Assembly. In all cases I would have personal examples to show the students of the work that either I did myself or previous students work. This would help give me a connection to the students and inspire them to take it upon themselves to create something original that challenged them</p>		
+</div>
+</div>
+</div>
+	
+
+	
+	<div class="container fadebox mt-3 mb-3">	
+	<div class="row px-2 py-2">	
+	 <div>
+		 <h2>Learning Interactive Examples</h2>
+	</div>	
+			<div class="row">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+		<img class="img-fluid img-thumb rounded border-dark mx-auto d-block" src="media/interactives/thumbs/MT.png" alt="Generic placeholder image">
+		<div class="media-body">
+		<h5 class="mt-1 text-center">Muscle Fibers</h5>
+		<p class="white">An interactive for an Anatomy and Physiology course. The format of this activity having tabs lended itself to a simpler way for the student to navigate the lesson. This activity ended up in a Rise presentation that included knowledge checks as well as other learning content.</p>
+		</div><script>
+
+    //---------------------------------------------------
+    // Load the model
+    //---------------------------------------------------
+
+    var model = new xeogl.GLTFModel({
+        src: "media/3dobjs/pumpkinmodeling.gltf"
+    });
+
+    //-----------------------------------------------------------------------------------------------------
+    // Camera animation and user control
+    //-----------------------------------------------------------------------------------------------------
+
+    var scene = xeogl.getDefaultScene();
+    var camera = scene.camera;
+
+    camera.eye = [261.92, 491.56, -340.21];
+    camera.look = [21.12, 243.80, -6.53];
+    camera.up = [-0.30, 0.85, 0.41];
+
+    camera.zoom(-65);
+
+    var spinning = true;
+
+    scene.on("tick", function () { // Slowly orbit the camera
+        if (spinning) {
+                camera.orbitYaw(-0.08);
+        }
+    });
+
+    var cameraControl = new xeogl.CameraControl(); // User camera control
+
+
+</script>
+	</div>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+	</div>
+	
+	</div>
+			</div>
+	</div>
+</div>
+	
+<div class="container fadebox mt-3">
+	<div class="col-12">
+			<div class="text-center">
+            <h1>Let's Make Something Great!</h1>
+            <p class="white">Contact me at toddmez@comcast.net or 815-263-3815 <br>I look forward to discussing how I can help bring rich content and interactives to your company.</p>
+			<p class="white">Copyright © Todd Mesewicz. All rights reserved.</p>
+            <a href="mailto:toddmez@comcast.net">
+				<button type="button" class="btn btn-success">Email Me</button>
+			 </a>
+				
+			</div>
+	</div>
+</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+	<script src="js/aos-master/dist/aos.js"></script>
+    <script>
+    AOS.init();
+   </script>
+  </body>
+</html>

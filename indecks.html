@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<title>Todd Mesewicz's Portfolio</title>
+
+<py-env>
+  -re
+</py-env>
+
+</head>
+
+<body>
+<py-script>
+import re
+
+list = [1,2,3,4,5,6,7,8,9,10]
+string = 'mary had a little lamb'
+
+found = re.findall(r'm\w{1,50}', string)
+print(found[0])
+
+for each in list:
+	pyscript.write('divbox', each)
+	print(each, end=' ')
+</py-script>
+
+<div style='border-radius: 10px; padding: 1px; width: 200px; background: #D8BFD8; height: 150px;' id='divbox'>
+</div>
+
+<py-title>
+some python title here
+</py-title>
+
+<py-box style='width:100px;'>
+	<py-inputbox>
+		please enter something
+	</py-inputbox>
+	<py-button value='button'>
+		some button
+	</py-button>
+</py-box>
+
+
+</body>
+</html>
