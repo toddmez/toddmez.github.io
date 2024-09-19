@@ -1,0 +1,16 @@
+<!--
+<div class="container-fluid mt-3">
+<div class="row">
+	<p class="white">
+    <span width="100%">Motion graphics demo reel. Work in order as it appears can be found in my shot list.</span>
+  </p>
+	<div class="px-5 py-2 embed-responsive embed-responsive-16by9">
+	<video width="320" height="240" controls preload="auto" poster="media/video/MG_Poster.png" class="embed-responsive-item">
+	<source src="media/video/MG_High01.mp4" type="video/mp4">
+	</video>
+	</div>
+
+</div> <!--end of row-->
+</div>	<!--end of container-->
+</div> <!--end of navbar-->
+</div> <!--end of collapse-->
