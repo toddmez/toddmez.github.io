@@ -1,0 +1,7 @@
+Pickles:
+Course Link Fix
+CLfix_v1.0.exe
+
+Jam:
+CFR Find and Replace single course
+CFRv142.exe

@@ -1,0 +1,23 @@
+{
+  "version": "3.10.13923.0",
+  "scenes": [
+    {
+      "title": "Play"
+    }
+  ],
+  "slides": [
+    {
+      "id": "5fcwTjoXEST",
+      "title": "Development and Play",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "width": 740,
+    "height": 425
+  },
+  "stage": {
+    "width": 720,
+    "height": 405
+  }
+}

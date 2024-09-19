@@ -1,0 +1,212 @@
+import sys
+import re
+from colorama import Fore, init
+
+init()
+
+# logger = logging.getLogger("canvasapi")
+# handler = logging.StreamHandler(sys.stdout)
+# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+#
+# handler.setLevel(logging.DEBUG)
+# handler.setFormatter(formatter)
+# logger.addHandler(handler)
+# logger.setLevel(logging.DEBUG)
+
+from canvasapi import Canvas
+API_URL = ""
+API_KEY = ""
+# initialize a new canvas object
+canvas = Canvas(API_URL, API_KEY)
+
+print(Fore.LIGHTBLUE_EX + '******************************************************************')
+print('*   ver. 1.3                                                     *')
+print('*   This script will search a course\'s Assignments and Pages     *')
+print('*   HTML for specific words and text. Please be careful!         *')
+print('*   There is no undo button. Pages can be reverted with version  *')
+print('*   history in Canvas but assignments cannot. Avoid characters   *')
+print('*   such as paren (, etc they will crash the program             *')
+print('*   '+Fore.LIGHTYELLOW_EX+'ex: search for <b><u>Phrase</u></b>'+Fore.LIGHTBLUE_EX+'                          *')
+print('*   '+Fore.LIGHTYELLOW_EX+'    replace with <b><i>Phrase</i></b>'+Fore.LIGHTBLUE_EX+'                        *')
+print('******************************************************************'+Fore.RESET)
+
+Search = True
+while Search == True:
+    try:
+        course_id = input("Please enter the course ID, for example (9524) or (q): ")
+        if len(course_id) > 5:
+            course_id = input("Please an ID with less than 5 digits: ")
+        if course_id == 'q':
+            sys.exit()
+        course = canvas.get_course(course_id)
+        course_pages = course.get_pages()
+        course_assignments = course.get_assignments()
+
+    except ValueError:
+        print('We need a number like 9524')
+        course_id = input("Please enter the course ID, for example (9524) or (q): ")
+        if course_id == 'q' or course_id == str:
+            sys.exit()
+    except NameError:
+        print('That course does not exist')
+        course_id = input("Please enter a number like (12345) or (q): ")
+        if course_id == 'q' or course_id != type(int):
+            sys.exit()
+    except TypeError:
+        course_id = input("Please enter a number like (01234) or (q): ")
+        if course_id == 'q' or course_id != type(int):
+            sys.exit()
+    # except ResourceDoesNotExist("Not Found"):
+    #     course_id = input("Please enter a number like (01234) or (q): ")
+    #     if course_id == 'q' or course_id != type(int):
+    #         sys.exit()
+
+    Search1 = True
+    while Search1 == True:
+
+        ################################
+        # Begin of Pages Search
+        ################################
+        Search_Tally_P = 0
+        Replace_Tally_P = 0
+        # Replace string needed variable in case results were equal to zero
+        Replace_Str = 'null'
+        Search_Str = input('Please enter a search string: ')
+        # Searches pages for a phrase and reports the matches, asks for replacement string passes that to next search
+        Replace_Str = input('What would you like to replace "' + Search_Str + '" with? ')
+        for page in course_pages:
+            # get the html
+            url = page.url
+            page_item = course.get_page(url)
+            html = page_item.body
+
+            # creates RegEx output for result. Creates a list.
+            regex1 = '.+'+Search_Str+'.+'
+            p = re.compile(regex1)
+            Search_Str_output = p.findall(html)
+
+            # count returns how many times str occurs in a string
+            strCount = html.count(Search_Str)
+            Search_Tally_P = Search_Tally_P + strCount
+            if strCount >= 1:
+                print('the Page '+Fore.LIGHTBLUE_EX+str(page_item.title)+Fore.RESET + ' contains the phrase '+Fore.GREEN+str(Search_Str)+Fore.RESET+', '+Fore.RED+str(strCount)+Fore.RESET + ' times')
+                print(Fore.LIGHTBLACK_EX+'Link to Page: ' + page_item.html_url)
+                print('Found here: '+ Search_Str_output[0]+Fore.RESET)
+            #else:
+            #  continue
+
+        if Search_Tally_P == 0:
+            print(Fore.LIGHTMAGENTA_EX + '*******************************************')
+            print('*   No matches in Pages. Doing Nothing.   *')
+            print('*******************************************' + Fore.RESET)
+
+        elif Search_Tally_P >= 1:
+            print(Fore.LIGHTBLUE_EX+'*************************************************')
+            print('* We found some matches in Pages!               '+Fore.RESET)
+            print(Fore.LIGHTBLUE_EX+'*'+Fore.RESET+' The total matches of the phrase: "'+Fore.GREEN+str(Search_Str)+Fore.RESET+'" is: '+Fore.LIGHTMAGENTA_EX+str(Search_Tally_P)+Fore.LIGHTBLUE_EX+' ')
+            print(Fore.LIGHTBLUE_EX+'*************************************************'+Fore.RESET)
+            # Replace_Str = input('What would you like to replace "'+Fore.GREEN+Search_Str+Fore.RESET+'" with? ')
+            Exit = input('Replace these items? Do you wish to continue? (y/n/q): ')
+            if Exit == 'y':
+                print(Fore.LIGHTYELLOW_EX + '************************')
+                print('   Ok, Here we go!')
+                print(Fore.LIGHTYELLOW_EX + '************************'+Fore.RESET)
+            elif Exit == 'n':
+                print('Ok')
+                break
+            elif Exit == 'q':
+                sys.exit()
+        ################################
+        # Begin of Pages Replacement
+        ################################
+        for page in course_pages:
+            # get the html
+            url = page.url
+            page_item = course.get_page(url)
+            html = page_item.body
+            # replace items with variables
+            htmlMod = html.replace(Search_Str, Replace_Str)
+            # count returns how many times str occurs in a string
+            strCount = html.count(Search_Str)
+            # replaces the content
+            page_item.edit(wiki_page={'body': htmlMod})
+            Replace_Tally_P = Replace_Tally_P + strCount
+            # print('Replacing '+Fore.GREEN+str(Search_Str)+Fore.RESET+' with '+Fore.GREEN+str(Replace_Str)+Fore.RESET+' on Page: '+Fore.LIGHTBLUE_EX+str(page_item.title)+Fore.RESET+', '+Fore.RED+str(strCount)+Fore.RESET+ ' times')
+        print(Fore.GREEN+'***************************************************************'+Fore.RESET)
+        print(Fore.GREEN+'* '+Fore.RESET+' The phrase "'+Fore.GREEN+Search_Str+Fore.RESET+'" has been replaced: ' + Fore.LIGHTMAGENTA_EX+str(Replace_Tally_P)+Fore.RESET + ' times in Pages'+Fore.GREEN+'    '+Fore.RESET)
+        print(Fore.GREEN+'***************************************************************'+Fore.RESET)
+        Choice1 = input('Continue to Assignments? (y/n/q): ')
+        if Choice1 == 'y':
+            print('Continuing to Assignments...')
+        if Choice1 == 'n':
+            break
+        if Choice1 == 'q':
+            sys.exit()
+
+    ################################
+    # Begin of Assignment Search
+    ################################
+        Search_Tally_A = 0
+        Replace_Tally_A = 0
+        for assign in course_assignments:
+            # get the html
+            # some assignments are external links with no html so we force a string here
+            html = str(assign.description)
+            # creates RegEx output for result. Creates a list.
+            regex2 = '.+'+Search_Str+'.+'
+            p = re.compile(regex2)
+            Search_Str_output = p.findall(html)
+            # count returns how many times str occurs in a string
+            strCount = html.count(Search_Str)
+            Search_Tally_A = Search_Tally_A + strCount
+            if strCount >= 1:
+                print('the Assignment '+Fore.LIGHTBLUE_EX+str(assign.name)+Fore.RESET + ' contains the phrase '+Fore.GREEN+str(Search_Str)+Fore.RESET+', '+Fore.LIGHTMAGENTA_EX+str(strCount)+Fore.RESET + ' times')
+                print(Fore.LIGHTBLACK_EX+'link to Assignment: ' + assign.html_url)
+                print('Found here: ' + Search_Str_output[0]+ Fore.RESET)
+            else:
+                continue
+                # wait = "*"
+                # print(wait)
+                # wait.replace('*','')
+                # wait.replace('\n','')
+                # print(wait)
+
+        if Search_Tally_A == 0:
+            print(Fore.LIGHTMAGENTA_EX +'***********************************************')
+            print('*  No matches in Assignments. Doing Nothing.  *')
+            print('***********************************************'+ Fore.RESET)
+            break
+        elif Search_Tally_A >= 1:
+            print(Fore.GREEN+'********************************************')
+            print(Fore.GREEN+'We found some matches in Assignments!'+Fore.RESET)
+        # #
+        print('The total matches of "'+Fore.GREEN+Search_Str+Fore.RESET+'" is: '+Fore.LIGHTMAGENTA_EX+str(Search_Tally_A)+Fore.RESET)
+        print(Fore.GREEN+'********************************************'+Fore.RESET)
+
+        Exit = input('Replacing "'+Search_Str+'" with "'+Replace_Str+'", in Assignments. This is undoable, continue? (y/n) :')
+        if Exit == 'y':
+            print(Fore.LIGHTYELLOW_EX + '***********************')
+            print('*   Ok, Here we go!   *')
+            print(Fore.LIGHTYELLOW_EX + '***********************'+Fore.RESET)
+        else:
+            print('Ok Goodbye!')
+            break
+        ################################
+        #Begin of Assignment Replacement
+        ################################
+        for assign in course_assignments:
+            # get the html
+            html = str(assign.description)
+            # replace items with variables
+            htmlMod = html.replace(Search_Str, Replace_Str)
+            # count returns how many times str occurs in a string
+            strCount = html.count(Search_Str)
+            # replaces the content
+            assignModHTML = (assign)
+            assignModHTML.edit(assignment={'description': htmlMod})
+            Replace_Tally_A = Replace_Tally_A + strCount
+            #print('Replacing '+Fore.GREEN+str(Search_Str)+Fore.RESET+' with '+Fore.GREEN+str(Replace_Str)+Fore.RESET+' in Assignment: '+Fore.LIGHTBLUE_EX+str(assign.name)+Fore.RESET+', '+Fore.RED+str(strCount)+Fore.RESET+ ' times')
+        print(Fore.GREEN+'*****************************************************************'+Fore.RESET)
+        print('* The phrase "'+Fore.GREEN+Search_Str+Fore.RESET+'" has been replaced: '+Fore.LIGHTMAGENTA_EX+str(Replace_Tally_A)+Fore.RESET+' times in Assignments *')
+        print(Fore.GREEN+'*****************************************************************'+Fore.RESET)
+        break

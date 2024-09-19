@@ -1,0 +1,23 @@
+{
+  "version": "3.10.13923.0",
+  "scenes": [
+    {
+      "title": "Growth & Development Play Interactive"
+    }
+  ],
+  "slides": [
+    {
+      "id": "604AYZYXJk3",
+      "title": "Toys",
+      "scene_index": "1.1"
+    }
+  ],
+  "player": {
+    "width": 740,
+    "height": 424
+  },
+  "stage": {
+    "width": 720,
+    "height": 404
+  }
+}

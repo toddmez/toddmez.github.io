@@ -1,0 +1,86 @@
+{
+	"questions": [
+		"<p><b>hint:</b> New opening of the colon to the outside of the body</p>\n",
+		"<p>O L M Y S O C O T</p>\n",
+		"<p>*C*-*O*-*L*-*O*-*S*-*T*-*O*-*M*-*Y*</p>\n"
+	],
+	"showSolutions": "Show solutions",
+	"tryAgain": "Try again",
+	"text": "<p>Last word...</p>\n",
+	"checkAnswer": "Check",
+	"notFilledOut": "",
+	"behaviour": {
+		"enableSolutionsButton": true,
+		"autoCheck": true,
+		"caseSensitive": false,
+		"showSolutionsRequiresInput": true,
+		"separateLines": false,
+		"enableRetry": true,
+		"confirmCheckDialog": false,
+		"confirmRetryDialog": false,
+		"acceptSpellingErrors": false,
+		"enableCheckButton": true
+	},
+	"answerIsCorrect": "&#039;:ans&#039; is correct",
+	"answerIsWrong": "&#039;:ans&#039; is wrong",
+	"answeredCorrectly": "Answered correctly",
+	"answeredIncorrectly": "Answered incorrectly",
+	"solutionLabel": "Correct answer:",
+	"inputLabel": "Blank input @num of @total",
+	"inputHasTipLabel": "Tip available",
+	"tipLabel": "Tip",
+	"confirmCheck": {
+		"header": "Finish ?",
+		"body": "Are you sure you wish to finish ?",
+		"cancelLabel": "Cancel",
+		"confirmLabel": "Finish"
+	},
+	"confirmRetry": {
+		"header": "Retry ?",
+		"body": "Are you sure you wish to retry ?",
+		"cancelLabel": "Cancel",
+		"confirmLabel": "Confirm"
+	},
+	"media": {
+		"type": {
+			"params": {
+				"contentName": "Image",
+				"file": {
+					"path": "images/blank.jpg",
+					"mime": "image/jpeg",
+					"width": 20,
+					"height": 5,
+					"copyright": {
+						"license": "U"
+					}
+				},
+				"alt": "Image of Studying",
+				"title": "Image of Studying"
+			},
+			"library": "H5P.Image 1.1",
+			"subContentId": "a3ed0e6c-d9b0-4330-b4fa-9ed3c328d1e5",
+			"metadata": {
+				"title": "A medical student studying",
+				"authors": [
+					{
+						"name": "Mikko Muinonen",
+						"role": "Author"
+					}
+				],
+				"source": "shits",
+				"license": "CC BY-ND",
+				"licenseVersion": "4.0",
+				"contentType": "Image"
+			}
+		},
+		"disableImageZooming": true
+	},
+	"overallFeedback": [
+		{
+			"from": 0,
+			"to": 100,
+			"feedback": "You got @score of @total blanks correct."
+		}
+	],
+	"scoreBarLabel": "You got :num out of :total points"
+}
