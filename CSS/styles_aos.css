@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.aos-all {
+  width: 1000px;
+  max-width: 98%;
+  margin: 10vh auto 0 auto;
+}
+
+.aos-item {
+  display: inline-block;
+  float: left;
+  width: 33.3333%;
+  height: 300px;
+  padding: 20px;
+}
+
+.aos-item__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: rgba(12,14,229,1.00);
+  line-height: 260px;
+  text-align: center;
+  /*color: #fff;*/
+  border-radius: 25px 25px 25 25;
+  border: medium solid rgba(12,14,229,1.00);
+  border: 5px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+}
+
+@media screen and (max-width: 800px) {
+  .aos-item {
+    width: 50%;
+  }
+}

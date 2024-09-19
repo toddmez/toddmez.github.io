@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todd Mesewicz's Portfolio</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125841501-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125841501-3');
+</script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+	<link href="css/styles2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" href="js/aos-master/dist/aos.css">
+	<script src="js/aos-master/dist/aos.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Anton|Merriweather|Open+Sans:700" rel="stylesheet">
+	<link href="js/lightGallery-master/dist/css/lightgallery.css" rel="stylesheet">
+	<link href="js/lightGallery-master/dist/css/lg-transitions.css" rel="stylesheet">
+  </head>
+  <body>
+<nav class="navbar navbar-dark navbar-custom navbox" data-aos="slide-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="200" >
+    <a class="navbar-brand" href="#"><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><h1><span style="font-style:italic; font-weight:300; font-size:.8em;"></span> <span style="font-style:normal; font-weight:500;">Todd Mesewicz</span></h1></button></a>
+	<button class="navbar-toggler btn-success1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+ <!--First Card -->
+ <div class="card text-white bg-dark mb-3">
+   <div class="card-body">
+     <h5 class="card-title">Recent Accomplishments</h5>
+     <p class="card-text">
+
+<ul>
+<li>Developed specific workflows to improve media development such as LMS API content distribution and bulk front loading of placeholder content.</li>
+<li>Trained members of the team on best practices on topics such as video editing, ftp, thumbnail creation.</li>
+<li>Served as a support liason for both technical assistance and LMS support.</li>
+</ul>
+</p>      <p class="card-text"><small class="text-muted"></small></p>
+   </div>
+ </div>
+
+  <!--Middle Card -->
+
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Past Achievements</h5>
+      <p class="card-text"><ul>
+		<li>Implemented a complete video production pipeline for an online graduate school and within a year developed over 200 unique and feature rich presentations to drive financial aid process, supplement student nursing orientations and increase teacher online presence.</li>
+<li>Developed responsive user navigation for university’s LMS system Canvas.</li>
+<li>Created fully branded responsive digital documentation, interactive guides and eBooks with supporting tutorial video screen casts.</li>
+</ul>
+      <p class="card-text"><small class="text-muted"></small></p>
+		</p>
+	  </div>
+  </div>
+
+  <!--Last Card -->
+
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Todd's Resume/CV</h5>
+      <p class="card-text">Click to download my resume in <a href="media/misc/ToddMesewicz_resume.pdf" target="_blank">PDF format</a></p>
+	  <p class="card-text">Click to download my resume in <a href="media/misc/ToddMesewicz_resume.docx" target="_blank">Word format</a></p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+
+
+
+</div>
+
+</div>
+</nav>
+
+<!-- Start of Storylines -->
+<div class="mt-2" style="background:rgba(105,109,255,.2);">
+	<button class="navbar-toggler btn-blue" type="button" data-toggle="collapse" data-target="#navbarToggleGD" aria-controls="navbarToggleGD" aria-expanded="false" aria-label="Toggle navigation">
+	<h1><span style="font-style:normal; font-weight:400; font-size:1em;">Storyline</span>
+	<span style="font-style:normal; font-weight:400;">Gallery</span></h1></button>
+  <div class="collapse show" id="navbarToggleGD">
+    <div class="navbar navbar-dark navbar-custom bg01">
+
+
+	<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ml-2">
+			<div id="mezgal1">
+				<a data-iframe="true" id="open-mf" data-src="media/interactives/MuscleFibers/index.html" href="media/interactives/MuscleFibers/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/MsclFt.png" class="Intgal" alt="Muscle Fibers. Interactive eLearning" data-aos="flip-up, fade" data-aos-delay="100">
+				</a>	
+				<a data-iframe="true" height="200" width="300" id="open-mc" data-src="media/interactives/MuscleContraction/index.html" href="media/interactives/MuscleContraction/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/MFt.png" class="Intgal" alt="Muscle Contraction Interactive eLearning" data-aos="flip-up" data-aos-delay="200">
+				</a>		
+				<a data-iframe="true" id="open-cr" data-src="media/interactives/ConflictResolution/index.html" href="media/interactives/ConflictResolution/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/CMt.png" class="Intgal" alt="Conflict Resolution Interactive eLearning" data-aos="flip-up" data-aos-delay="300">
+				</a>		
+				<a data-iframe="true" id="open-mt" data-src="media/interactives/MembraneTransportTrans/index.html" href="media/interactives/MembraneTransportTrans/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/MTt.png" class="Intgal" alt="Membrane Transport Interactive eLearning" data-aos="flip-up" data-aos-delay="400">
+				</a>		
+				<a data-iframe="true" id="open-vt" data-src="media/interactives/VesicularTransport/index.html" href="media/interactives/VesicularTransport/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/VTt.png" class="Intgal" alt="Vesicular Transport Interactive eLearning" data-aos="flip-up" data-aos-delay="500">
+				</a>
+				<a data-iframe="true" id="open-gd" data-src="media/interactives/GrowthandDevelopment/index.html" href="media/interactives/GrowthandDevelopment/index.html">
+				<img src="media/interactives/thumbs/all_thumbs-assets/GDt.png" class="Intgal" alt="Growth and Development Interactive eLearning" data-aos="flip-up" data-aos-delay="600">
+				</a>
+	 		</div>
+	</div>
+	</div> <!--end of row-->
+</div> <!--end of container-->
+</div> <!--end of navbar-->
+
+</div> <!--end of collapse-->
+  <nav class="navbar navbar-dark navbar-custom">
+    <button class="navbar-toggler btn-success1 btn-block" type="button" data-toggle="collapse" data-target="#navbarToggleGD" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+</div>	<!--end of fadebox-->
+
+
+
+<!-- Start of Teaching and Training -->
+<div class="mt-3 mb-3" style="background:rgba(255,232,101,.2);">
+	<button class="navbar-toggler btn-yellow" type="button" data-toggle="collapse" data-target="#navbarToggleTeacher" aria-controls="navbarToggleTeacher" aria-expanded="false" aria-label="Toggle navigation"><h1> <span style="font-weight:500;font-style:oblique;">e</span><span style="font-weight:700;">Learning</span></h1></button>
+
+  <div class="collapse show" id="navbarToggleTeacher"> <!--add show to class to open section-->
+    <div class="navbar navbar-dark navbar-custom">
+
+<div class="container mt-3">
+<div class="row">
+<div>
+		<p class="white">The video below is a quick overview of the interactive media that I have developed. I used Articulate, Camtasia and Adobe Creative Cloud.</p>
+
+	<div class="px-5 py-2 embed-responsive embed-responsive-16by9">
+<iframe src="https://player.vimeo.com/video/327434753" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+	</div>
+
+	<h5 class="mt-1 text-center-yellow">Interactive Media Reel</h5>
+</div>
+</div> <!--end of row-->
+</div> <!--end of container-->
+</div> <!--end of collapse-->
+
+<nav class="navbar navbar-dark navbar-custom">
+    <button class="navbar-toggler btn-success1 btn-block" type="button" data-toggle="collapse" data-target="#navbarToggleTeacher" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav> <!--end of navbar bottom-->
+</div> <!--end of fade box-->
+
+
+
+<div class="mt-3 fadebox1">
+<div class="container">
+<div class="row">
+	<div class="mx-1 my-1 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<div>
+            <h1 style="font-weight:700;font-size:1.5em;text-align:center;color: rgba(165,232,96,1);">Let's Make Something Great!</h1>
+            <p class="white">Available for freelance, graphic design, 3d modeling and website development projects.</p>
+			<p class="white">Contact me: <a href="mailto:toddmez@comcast.net" style="text-decoration:none;border:none;color:yellowgreen;font-weight:bold;">email</a> <br>or <a href="Skype:tmez08">Skype</a><br> <a href="tel:8152633815">815-263-3815</a> <br>I look forward to hearing from you. <br><br>
+			<span style="font-size:.8em;">Copyright © Todd Mesewicz. All rights reserved.</span></p>
+            <a href="mailto:toddmez@comcast.net">
+				<button type="button" class="btn btn-block btn-email p-1"><h1 style="font-weight:700;">Let's Get Started</button></a>
+			</div>
+	</div>
+</div>
+</div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+	<script src="js/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        easing: 'ease-in-out-sine',
+		duration: 600,
+      });
+	 </script>
+	<script src="js/lightGallery-master/dist/js/lightgallery-all.js"></script>
+	<script type="text/javascript">
+		 $(document).ready(function() {
+        	$("#mezgal1").lightGallery({
+			mode:'lg-soft-zoom',
+			cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)',
+			share: false,
+			download: false,
+			autoplayControls: false,
+			fullScreen: true,
+			zoom: false,
+			closeable: true,
+			iframeMaxWidth: '1000px',
+			});});
+	</script>
+	</body>
+</html>
