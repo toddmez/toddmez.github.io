@@ -12,8 +12,8 @@ class Text extends Phaser.Scene
 {
     preload ()
     {
-        this.load.text('sent', 'http://localhost/phaser/text.txt');
-        this.load.html('shtml', 'http://localhost/phaser/text.html');  
+        this.load.text('sent', 'text.txt');
+        //this.load.html('shtml', 'http://localhost/phaser/text.html');  
     }
 
     create ()
