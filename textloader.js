@@ -12,7 +12,7 @@ class Text extends Phaser.Scene
 {
     preload ()
     {
-        this.load.text('sent', 'text.txt');
+        this.load.text('sent', 'https://toddmez.github.io/text.txt');
         //this.load.html('shtml', 'http://localhost/phaser/text.html');  
     }
 
