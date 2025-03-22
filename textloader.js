@@ -36,7 +36,7 @@ class Text extends Phaser.Scene
 {
   preload (){
     this.load.text('sent', 'https://toddmez.github.io/text2.txt');
-    this.load.bitmapFont('bmfont', 'https://toddmez.github.io/assets/retrotech/retrotech.png', 'http://toddmez.github.io/assets/retrotech/retrotech.xml');
+    this.load.bitmapFont('bmfont', 'https://toddmez.github.io/assets/retrotech/retrotech.png', 'https://toddmez.github.io/assets/retrotech/retrotech.xml');
     this.load.audio('return', 'https://toddmez.github.io/assets/sound.wav');
     this.load.audio('drop', 'https://toddmez.github.io/assets/drop1.mp3');
     this.load.image('background', 'https://toddmez.github.io/assets/background.png');
