@@ -1,6 +1,6 @@
 {
     "taskDescription": "Find the Principles of Animation",
-    "wordList": "SquashStretch,Anticipation,Staging,StraightAheadAction,SlowInandSlowOut,Arcs,TimingAnd Spacing,FollowThroughandOverlappingAction, SecondaryAction, SolidDrawing, Exaggeration, Appeal",
+    "wordList": "SquashStretch,Anticipation,Staging,StraightAheadAction,SlowIn,SlowOut,Arcs,Timing, SecondaryAction, SolidDrawing, Exaggeration, Appeal",
     "behaviour": {
         "orientations": {
             "horizontal": true,
