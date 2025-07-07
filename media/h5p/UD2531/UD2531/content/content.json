@@ -25,6 +25,6 @@
         "found": "@found of @totalWords found",
         "timeSpent": "Time Spent",
         "score": "You got @score of @total points",
-        "wordListHeader": "Countries"
+        "wordListHeader": "Principles"
     }
 }
