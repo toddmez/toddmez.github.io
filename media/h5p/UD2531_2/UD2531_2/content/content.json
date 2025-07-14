@@ -2,7 +2,7 @@
     "media": {
         "disableImageZooming": false
     },
-    "text": "Fill in the missing words by typing them into the blanks below. Tap or click on the 'Check' button to check your answers. Use the following words to help you: <br><br><b>timing, staging, arcs, squash and stretch, follow through, staging</b>",
+    "text": "<h2>Fill in the missing principles by typing them into the blanks below.</h2> <h3>Tap or click on the 'Check' button to check your answers. Use the following words to help you</h3><ul><li>appeal<li>secondary action<li>solid drawing <li>anticipation<li>timing<li>staging<li>arcs<li>squash and stretch<li>exaggeration<li>follow through</ul>",
     "overallFeedback": [{
             "from": 0,
             "to": 100
@@ -50,11 +50,15 @@
         "cancelLabel": "Cancel",
         "confirmLabel": "Confirm"
     },
-    "questions": ["<p>This principle can show the weight of the object by elongating and deforming the object. *squash and stretch*</p>", 
+    "questions": ["<p>Making a character more interesting to the viewer, making a character short, tall, silly, powerful, funny, etc, this is using this principle. *appeal*</p>",
+	"<p>This principle can show the weight of the object by elongating and deforming the object. *squash and stretch*</p>", 
 	"<p>You would use this princple to show that a character was getting ready to jump by having the character crouch first. *anticipation*</p>", 
 	"<p>This is the presentation of an idea so that it is completely obvious what to look at on the screen. *staging*</p>",
+	"<p>This is about making sure that drawings are in three dimensional space. *solid drawing*</p>",
 	"<p>By using *arcs*, you can show more organic motion. This is the way most living creatures move. For example the motion a character's hand might make when throwing a ball.</p>",
 	"<p>When you consider *timing*, the more frames you have, the slower the action. The less frames the quicker the action.</p>",
-	"<p>When animating a cat jumping you can use *follow through* to show the tail continue to move after the cat lands</p><img src='https://drive.google.com/file/d/1aheCTiaGdkleOQSytfIiBdkRp_PxNpd3/view?usp=drive_link'>"
+	"<p>When animating a cat jumping you can use *follow through* to show the tail continue to move after the cat lands.</p>",
+	"<p>Using *secondary action*, supports the main action. For example a character pounding on a door might also make a tight fist with his other hand to show anger.</p>", 
+	"Every action can be taken to the next level. This can be done by using *exaggeration*."
 	]
 }
