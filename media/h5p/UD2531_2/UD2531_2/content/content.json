@@ -1,0 +1,60 @@
+{
+    "media": {
+        "disableImageZooming": false
+    },
+    "text": "Fill in the missing words by typing them into the blanks below. Tap or click on the 'Check' button to check your answers. Use the following words to help you: <br><br><b>timing, staging, arcs, squash and stretch, follow through, staging</b>",
+    "overallFeedback": [{
+            "from": 0,
+            "to": 100
+        }
+    ],
+    "showSolutions": "Show solution",
+    "tryAgain": "Retry",
+    "checkAnswer": "Check",
+    "submitAnswer": "Submit",
+    "notFilledOut": "Please fill in all blanks to view solution",
+    "answerIsCorrect": "':ans' is correct",
+    "answerIsWrong": "':ans' is wrong",
+    "answeredCorrectly": "Answered correctly",
+    "answeredIncorrectly": "Answered incorrectly",
+    "solutionLabel": "Correct answer:",
+    "inputLabel": "Blank input @num of @total",
+    "inputHasTipLabel": "Tip available",
+    "tipLabel": "Tip",
+    "behaviour": {
+        "enableRetry": true,
+        "enableSolutionsButton": true,
+        "enableCheckButton": true,
+        "autoCheck": false,
+        "caseSensitive": true,
+        "showSolutionsRequiresInput": true,
+        "separateLines": false,
+        "confirmCheckDialog": false,
+        "confirmRetryDialog": false,
+        "acceptSpellingErrors": false
+    },
+    "scoreBarLabel": "You got :num out of :total points",
+    "a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+    "a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+    "a11yRetry": "Retry the task. Reset all responses and start the task over again.",
+    "a11yCheckingModeHeader": "Checking mode",
+    "confirmCheck": {
+        "header": "Finish ?",
+        "body": "Are you sure you wish to finish ?",
+        "cancelLabel": "Cancel",
+        "confirmLabel": "Finish"
+    },
+    "confirmRetry": {
+        "header": "Retry ?",
+        "body": "Are you sure you wish to retry ?",
+        "cancelLabel": "Cancel",
+        "confirmLabel": "Confirm"
+    },
+    "questions": ["<p>This principle can show the weight of the object by elongating and deforming the object. *squash and stretch*</p>", 
+	"<p>You would use this princple to show that a character was getting ready to jump by having the character crouch first. *anticipation*</p>", 
+	"<p>This is the presentation of an idea so that it is completely obvious what to look at on the screen. *staging*</p>",
+	"<p>By using *arcs*, you can show more organic motion. This is the way most living creatures move. For example the motion a character's hand might make when throwing a ball.</p>",
+	"<p>When you consider *timing*, the more frames you have, the slower the action. The less frames the quicker the action.</p>",
+	"<p>When animating a cat jumping you can use *follow through* to show the tail continue to move after the cat lands</p><img src='https://drive.google.com/file/d/1aheCTiaGdkleOQSytfIiBdkRp_PxNpd3/view?usp=drive_link'>"
+	]
+}
