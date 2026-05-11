@@ -6,7 +6,7 @@ html {
 body {
   background-color:black; 
   background-attachment: fixed;
-  background-image: url("../Media/images/backgrounds/BG.jpg");
+  background-image: url("../media/images/backgrounds/BG.jpg");
   background-repeat: no-repeat;
 }
 .btn-success {
